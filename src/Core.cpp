@@ -2,6 +2,7 @@
 #include <ankerl/unordered_dense.h>
 #include "VM.h"
 #include <unordered_set>
+#include <algorithm>
 
 uint32_t Index = 0;
 ankerl::unordered_dense::map<uint32_t, VM*> VMs = {};
