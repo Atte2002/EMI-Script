@@ -816,7 +816,11 @@ void ASTWalker::WalkLoad(Node* n)
 
 void ASTWalker::handle_default(Node* n)
 {
+#ifdef DEBUG
 	Error("No handler for token " << TokensToName[n->type]);
+#else
+    Error("No handler for token");
+#endif
 }
 
 void ASTWalker::handle_Scope(Node* n) {
