@@ -11,6 +11,7 @@
 
 ModuleWrapper ModuleLoader::LoadModule(const char* path)
 {
+#ifdef WIN32
     HMODULE dll = LoadLibrary(path);
 
     if (!dll)
@@ -19,4 +20,7 @@ ModuleWrapper ModuleLoader::LoadModule(const char* path)
     auto loader = GetProcAddress(dll, "");
     loader;
     return ModuleWrapper();
+#endif
+    return ModuleWrapper();
+
 }
