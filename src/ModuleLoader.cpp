@@ -19,7 +19,6 @@ ModuleWrapper ModuleLoader::LoadModule(const char* path)
 
     auto loader = GetProcAddress(dll, "");
     loader;
-    return ModuleWrapper();
 #endif
     return ModuleWrapper();
 
